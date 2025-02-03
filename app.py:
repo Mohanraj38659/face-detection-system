@@ -1,0 +1,17 @@
+import cv2
+from face_detector import detect_faces
+from utils import load_image, show_image
+
+def main(image_path):
+    # Load the image
+    image = load_image(image_path)
+    
+    # Detect faces in the image
+    detected_image = detect_faces(image)
+    
+    # Display the result
+    show_image(detected_image)
+
+if __name__ == "__main__":
+    image_path = "images/test_image.jpg"  # Path to the test image
+    main(image_path)
